@@ -57,15 +57,27 @@ const App = () => {
 		setIsInterval(v => !v);
 	}
 
-	// const stopTime = () => setRunning(false);
-
 	return (
-		<div className="App">
-			<h1>In action quantity: {inActionQuantity}</h1>
-			<h1>Small intervals: {smallIntervalQuantity}</h1>
-			<h1>Long intervals: {longIntervalQuantity}</h1>
-			<button disabled={isRunning} onClick={() => startTime()}>Start</button>
-			<h1>{minutesPart}:{secordsPart}</h1>
+		<div className="container py-3">
+			<header className="mb-5">
+				<div className="time-header pt-5 pb-5 mx-auto text-center">
+					<h1 className="lh-lg display-1 fs-[9rem]">{minutesPart}:{secordsPart}</h1>
+					<div>
+						<button className="btn btn-success btn-lg" disabled={isRunning} onClick={() => startTime()}>Start</button>
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div className="content-main p-3 pb-md-4 mx-auto border">
+					<div>
+						<h1>In action quantity: {inActionQuantity}</h1>
+						<h1>Small intervals: {smallIntervalQuantity}</h1>
+						<h1>Long intervals: {longIntervalQuantity}</h1>
+					</div>
+				</div>
+			</main>
+
 		</div>
 	);
 }

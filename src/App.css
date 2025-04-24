@@ -1,0 +1,9 @@
+.time-header {
+    max-width: 960px;
+    background-color: blue;
+}
+
+.content-main {
+    max-width: 960px;
+    /* background-color: red; */
+}
